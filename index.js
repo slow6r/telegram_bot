@@ -58,15 +58,19 @@ bot.hears('Привет!', (ctx) => {
 })
 bot.hears('Всё отлично!😁', (context) => {
     context.reply((`${arrMesageBot_Good[roundMatch(3, 0)]}`))
+    console.log('У Поли все отлично')
 })
 bot.hears('Пойдет😐', (context) => {
     context.reply((`${arrMesageBot_Sow[roundMatch(2, 0)]}`))
+    console.log('У Поли всё пойдёт')
 })
 bot.hears('Всё ужасно..😞', (context) => {
     context.reply((`${arrMesageBot_bad[roundMatch(1, 0)]}`))
+    console.log('У Поли всё ужасно...')
 })
 bot.hears('Лучше скажи как у тебя дела?🙃', (context) => {
     context.reply((`${arrMesageBot_bot[roundMatch(2, 0)]}`))
+    console.log('Поля наглеет')
 })
 
 bot.hears('📌Открыть меню📌', (ctx) => {
@@ -97,6 +101,7 @@ bot.action('one', (ctx) => {
             ],
         ])
     })
+    console.log('Поля смотрит картинки..')
 })
 bot.action('two', (ctx) => {
     ctx.reply('Выбирем видео..', {
@@ -116,6 +121,7 @@ bot.action('two', (ctx) => {
 
         ])
     })
+    console.log('Поля выбирает видео')
 })
 //video
 bot.action('1_channel', (ctx) => {
@@ -155,21 +161,26 @@ bot.action('three', (ctx) => {
             ],
         ])
     })
-    ctx.reply('Если хочешь вернуться к выбору музыки напиши мне "хочу музыку"')
+    ctx.reply('Если хочешь вернуться к выбору музыки напиши мне "Хочу музыку"')
+    console.log('Поля выбирает плейлист')
 })
 bot.action('meditation', (ctx) => {
     ctx.reply('https://www.youtube.com/watch?v=kndqIj8Qgok&t=162s')
+    console.log('Поля сегодня медитирует')
 })
 bot.action('kpop', (ctx) => {
     ctx.reply((`${kpop[roundMatch(2, 0)]}`))
+    console.log('Поля слушает kpop')
 })
 bot.action('yandex', (ctx) => {
     ctx.reply('https://music.yandex.ru/users/paulinaselyuk/playlists/3')
+    console.log('Поля слушает свой плейлист')
 })
 bot.action('estetic', (ctx) => {
     ctx.reply((`${estetic[roundMatch(2, 0)]}`))
+    console.log('Поля сегодня на эстетике')
 })
-bot.hears('хочу музыку', (ctx) => {
+bot.hears('Хочу музыку', (ctx) => {
     ctx.reply('Подбираю плейлист', {
         reply_markup: Markup.inlineKeyboard([
             [
@@ -192,6 +203,7 @@ bot.hears('хочу музыку', (ctx) => {
 //fackts
 bot.action('four', (ctx) => {
     ctx.reply((`${fackt[roundMatch(11, 0)]}`))
+    console.log('Поля прочитала факт')
     
 })
 
@@ -210,14 +222,15 @@ bot.action('three_love', (ctx) => {
         url: (`${picture_love[roundMatch(33, 0)]}`)
         
     })
-    ctx.reply('Если хочешь вернуться к выбору фото, напиши мне "хочу фото"'
+    ctx.reply('Если хочешь вернуться к выбору фото, напиши мне "Хочу фото"'
     )
+
 
 
 
     
 })
-bot.hears('хочу фото', (ctx) => {
+bot.hears('Хочу фото', (ctx) => {
     ctx.reply('Осталось выбрать =)', {
         reply_markup: Markup.inlineKeyboard([
             [
@@ -231,9 +244,9 @@ bot.hears('хочу фото', (ctx) => {
             ],
         ])
     })
-    ctx.reply('Если хочешь вернуться в меню, напиши мне "вернуться меню"')
+    ctx.reply('Если хочешь вернуться в меню, напиши мне "Открыть меню"')
 })
-bot.hears('вернуться в меню', (ctx) => {
+bot.hears('Вернуться в меню', (ctx) => {
     ctx.reply('Это мой основной мозг🧠', {
         reply_markup: Markup.inlineKeyboard([
             [
